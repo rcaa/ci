@@ -2,7 +2,7 @@ package algoritmos;
 
 import java.io.IOException;
 
-p
+
 public class BubbleSort {
   public static void main(String args[]) {
     int[] v = {5, 2, 4, 3, 0, 9, 7, 8, 1, 6};
@@ -34,5 +34,4 @@ public class BubbleSort {
       }
     }
   }
-}
 }
