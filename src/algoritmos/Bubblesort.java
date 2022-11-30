@@ -9,8 +9,11 @@ public class Bubblesort {
              int quantidade = 10000;
              int[] vetor = new int[quantidade];
 
+            System.out.println("\nVetor: ");
              for (int i = 0; i < vetor.length; i++) {
                      vetor[i] = (int) (Math.random()*quantidade);
+
+                     System.out.print(vetor[i] + " ");
              }
 
              long tempoInicial = System.currentTimeMillis();
@@ -19,7 +22,8 @@ public class Bubblesort {
 
              long tempoFinal = System.currentTimeMillis();
 
-             System.out.println("Executado em = " + (tempoFinal - tempoInicial) + " ms");
+             System.out.println("\nExecutado em = " + (tempoFinal - tempoInicial) + " ms");
+             
 
        }
 
