@@ -35,6 +35,7 @@ public class Mergesort {
         for (int i = mid; i < n; i++) {
             r[i - mid] = a[i];
         }
+
         mergeSort(l, mid);
         mergeSort(r, n - mid);
 
