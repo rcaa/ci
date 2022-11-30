@@ -14,3 +14,4 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - run: java src/algoritmos/Quicksort.java
+      - run: java src/algoritmos/RadixSort.java
