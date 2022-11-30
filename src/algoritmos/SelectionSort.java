@@ -4,26 +4,22 @@ import java.io.IOException;
 
 public class SelectionSort {
 
-	private static Scanner sc;
-
 	public static void main(String args[]) {
-		sc = new Scanner(System.in);
+		int quantidade = 10000;
+		int[] vetor = new int[quantidade];
 
-		System.out.println("Vetor desordenado");
-		int n = sc.nextInt();
+		System.out.println("Vetor desordenado: ");
+		for (int i = 0; i < vetor.length; i++) {
+			vetor[i] = (int) (Math.random() * quantidade);
+			System.out.print(i + " ");
+		}
 
-		System.out.println("Vetor ordenado");
-		int arr[] = new int[n];
-		for (int i = 0; i < n; i++)
-			arr[i] = sc.nextInt();
+		sort(vetor);
 
-		System.out.println("A matriz não ordenada é:");
-		System.out.println(Arrays.toString(arr));
-
-		sort(arr);
-
-		System.out.println("A matriz ordenada é:");
-		System.out.println(Arrays.toString(arr));
+		System.out.println("\nVetor ordenado: ");
+		for (int i : vetor) {
+			System.out.print(i + " ");
+		}
 	}
 
 	static void sort(int arr[]) {
