@@ -15,3 +15,5 @@ jobs:
           distribution: 'adopt'
       - run: java src/algoritmos/MergeSort.java
       - run: java src/algoritmos/Quicksort.java
+      - run: java src/algoritmos/Bubblesort.java
+
