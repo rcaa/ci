@@ -24,6 +24,7 @@ public class Mergesort {
         if (n < 2) {
             return;
         }
+
         int mid = n / 2;
         int[] l = new int[mid];
         int[] r = new int[n - mid];
