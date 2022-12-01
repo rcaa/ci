@@ -13,26 +13,28 @@ public class BubbleSort {
 			vetor[i] = (int) (Math.random() * quantidade);
 			System.out.print(i + " ");
 		}
+
 		bubbleSort(vetor);
+
 		System.out.println("\nVetor ordenado: ");
 		for (int i : vetor) {
 			System.out.print(i + " ");
 		}
 	}
 
-	private static void bubbleSort(int vetor[]){
-	               boolean troca = true;
-	               int aux;
-	               while (troca) {
-	                   troca = false;
-	                   for (int i = 0; i < vetor.length - 1; i++) {
-	                       if (vetor[i] > vetor[i + 1]) {
-	                           aux = vetor[i];
-	                           vetor[i] = vetor[i + 1];
-	                           vetor[i + 1] = aux;
-	                           troca = true;
-	                       }
-	                   }
-	               }
-	       }
+	private static void bubbleSort(int vetor[]) {
+		boolean troca = true;
+		int aux;
+		while (troca) {
+			troca = false;
+			for (int i = 0; i < vetor.length - 1; i++) {
+				if (vetor[i] > vetor[i + 1]) {
+					aux = vetor[i];
+					vetor[i] = vetor[i + 1];
+					vetor[i + 1] = aux;
+					troca = true;
+				}
+			}
+		}
+	}
 }
