@@ -1,7 +1,5 @@
 package algoritmos;
 
-import java.io.IOException;
-
 public class SelectionSort {
 
 	public static void main(String args[]) {
