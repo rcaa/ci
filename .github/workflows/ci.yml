@@ -1,5 +1,6 @@
 name: Java CI
 
+
 on: [push, pull_request]
 
 jobs:
@@ -14,5 +15,8 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - run: java src/algoritmos/Quicksort.java
-      - run: java src/algoritmos/Bubblesort.java
       - run: java src/algoritmos/SelectionSortExample.java
+      - run: java src/algoritmos/RadixSort.java
+      - run: java src/algoritmos/BubbleSort.java
+      - run: java src/algoritmos/MergeSort.java
+      - run: java src/algoritmos/SelectionSort.java
