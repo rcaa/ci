@@ -2,7 +2,7 @@ package algoritmos;
 
 import java.io.IOException;
 
-public class Mergesort {
+public class MergeSort {
 
 	public static void main(String[] args) throws IOException {
 		int quantidade = 10000;
