@@ -2,7 +2,7 @@ package algoritmos;
 
 import java.io.IOException;
 
-public class BubbleSort {
+public class Quicksort {
 
 	public static void main(String[] args) throws IOException {
 		int quantidade = 10000;
@@ -13,28 +13,22 @@ public class BubbleSort {
 			vetor[i] = (int) (Math.random() * quantidade);
 			System.out.print(i + " ");
 		}
-
 		bubbleSort(vetor);
-
 		System.out.println("\nVetor ordenado: ");
 		for (int i : vetor) {
 			System.out.print(i + " ");
 		}
 	}
 
-	private static void bubbleSort(int vetor[]) {
-		boolean troca = true;
-		int aux;
-		while (troca) {
-			troca = false;
-			for (int i = 0; i < vetor.length - 1; i++) {
-				if (vetor[i] > vetor[i + 1]) {
-					aux = vetor[i];
-					vetor[i] = vetor[i + 1];
-					vetor[i + 1] = aux;
-					troca = true;
-				}
-			}
-		}
+	private static void bubbleSort(int[] arr) {
+		for(int i = 0; i < arr.length - 1; i ++){
+            for(int j = 0; j < arr.length - 1  ;j++){
+                if(arr[j] > arr[j+1]){
+                    int swap = arr[j];        // place the bigger number to swap
+                    arr[j] = arr[j+1];    // place the smaller number
+                    arr[j+1] = swap;
+                }
+            }
+        }
 	}
 }

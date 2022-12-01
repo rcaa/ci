@@ -16,3 +16,4 @@ jobs:
       - run: java src/algoritmos/Quicksort.java
       - run: java src/algoritmos/RadixSort.java
       - run: java src/algoritmos/BubbleSort.java
+      - run: java src/algoritmos/MergeSort.java
