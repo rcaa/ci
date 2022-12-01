@@ -2,9 +2,9 @@ package algoritmos;
 
 import java.io.IOException;
 
-public class BubbleSort {
+public class SelectionSort {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String args[]) {
 		int quantidade = 10000;
 		int[] vetor = new int[quantidade];
 
@@ -14,7 +14,7 @@ public class BubbleSort {
 			System.out.print(i + " ");
 		}
 
-		bubbleSort(vetor);
+		sort(vetor);
 
 		System.out.println("\nVetor ordenado: ");
 		for (int i : vetor) {
@@ -22,18 +22,16 @@ public class BubbleSort {
 		}
 	}
 
-	private static void bubbleSort(int vetor[]) {
-		boolean troca = true;
-		int aux;
-		while (troca) {
-			troca = false;
-			for (int i = 0; i < vetor.length - 1; i++) {
-				if (vetor[i] > vetor[i + 1]) {
-					aux = vetor[i];
-					vetor[i] = vetor[i + 1];
-					vetor[i + 1] = aux;
-					troca = true;
-				}
+	static void sort(int arr[]) {
+		for (int i = 0; i < arr.length - 1; i++) {
+			int iMin = i;
+			for (int j = i + 1; j < arr.length; j++)
+				if (arr[j] < arr[iMin])
+					iMin = j;
+			if (i != iMin) {
+				int temp = arr[i];
+				arr[i] = arr[iMin];
+				arr[iMin] = temp;
 			}
 		}
 	}
