@@ -7,13 +7,12 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		f(10);
 		readFile("");
+		validarString("omnilink");
 	}
 
 	public static long f(int n) {
-        int x;
 		if (n < 2) {
             return n;
         } else {
@@ -39,5 +38,9 @@ public class Main {
 	        e.printStackTrace(); 
 	    } 
 	    return ""; 
+	}
+	
+	public static boolean validarString(String entrada) {
+		return entrada != null && !entrada.equals("") && entrada.length() > 3;
 	}
 }
