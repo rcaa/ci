@@ -1,6 +1,5 @@
 package algoritmos;
 
-import java.io.IOException;
 
 public class Quicksort {
 
