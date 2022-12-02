@@ -14,7 +14,6 @@ public class Main {
 	}
 
 	public static long f(int n) {
-        int x;
 		if (n < 2) {
             return n;
         } else {
@@ -43,10 +42,6 @@ public class Main {
 	}
 	
 	public static boolean validarString(String entrada) {
-		if (entrada != null && !entrada.equals("") && entrada.length() > 3) {
-			return true;
-		} else {
-			return false;
-		}
+		return entrada != null && !entrada.equals("") && entrada.length() > 3;
 	}
 }
