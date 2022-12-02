@@ -27,22 +27,23 @@ public class OrdenacaoSort {
 	private static int separar(int[] vetor, int inicio, int fim) {
 		int pivo = vetor[inicio];
 		int i = inicio + 1;
-		while (i <= fim) {
+		int fimTemp = fim;
+		while (i <= fimTemp) {
 			if (vetor[i] <= pivo)
 				i++;
-			else if (pivo < vetor[fim])
-				fim--;
+			else if (pivo < vetor[fimTemp])
+				fimTemp--;
 			else {
 				int troca = vetor[i];
-				vetor[i] = vetor[fim];
-				vetor[fim] = troca;
+				vetor[i] = vetor[fimTemp];
+				vetor[fimTemp] = troca;
 				i++;
-				fim--;
+				fimTemp--;
 			}
 		}
-		vetor[inicio] = vetor[fim];
-		vetor[fim] = pivo;
-		return fim;
+		vetor[inicio] = vetor[fimTemp];
+		vetor[fimTemp] = pivo;
+		return fimTemp;
 	}
 
 }
