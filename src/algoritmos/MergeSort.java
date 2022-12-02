@@ -2,7 +2,7 @@ package algoritmos;
 
 import java.io.IOException;
 
-public class Mergesort {
+public class MergeSort {
 
 	public static void main(String[] args) throws IOException {
 		int quantidade = 10000;
@@ -45,7 +45,9 @@ public class Mergesort {
 	private static void merge(
       int[] a, int[] l, int[] r, int left, int right) {
      
-        int i = 0, j = 0, k = 0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
         while (i < left && j < right) {
             if (l[i] <= r[j]) {
                 a[k++] = l[i++];
