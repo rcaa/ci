@@ -1,40 +1,36 @@
 package algoritmos;
 
-import java.io.IOException;
+
 
 public class BubbleSort {
-
-	public static void main(String[] args) throws IOException {
-		int quantidade = 10000;
-		int[] vetor = new int[quantidade];
-
-		System.out.println("Vetor desordenado: ");
-		for (int i = 0; i < vetor.length; i++) {
-			vetor[i] = (int) (Math.random() * quantidade);
-			System.out.print(i + " ");
-		}
-
-		bubbleSort(vetor);
-
-		System.out.println("\nVetor ordenado: ");
-		for (int i : vetor) {
-			System.out.print(i + " ");
-		}
-	}
-
-	private static void bubbleSort(int vetor[]) {
-		boolean troca = true;
-		int aux;
-		while (troca) {
-			troca = false;
-			for (int i = 0; i < vetor.length - 1; i++) {
-				if (vetor[i] > vetor[i + 1]) {
-					aux = vetor[i];
-					vetor[i] = vetor[i + 1];
-					vetor[i + 1] = aux;
-					troca = true;
-				}
-			}
-		}
-	}
+  public static void main(String args[]) {
+    int[] v = {5, 2, 4, 3, 0, 9, 7, 8, 1, 6};
+    BubbleSort bs = new BubbleSort();
+    bs.ordenar(v);
+    for(int num : v) {
+      System.out.print(num + " ");
+    }
+  }
+  
+  /**
+   * Método que ordena um vetor de inteiros utilizando o algoritmo
+   * de Bubble Sort.
+   * 
+   * @param v - Vetor que será ordenado.
+   */
+  public void ordenar(int[] v) {
+    // for utilizado para controlar a quantidade de vezes que o vetor será ordenado.
+    for(int i = 0; i < v.length - 1; i++) {
+      // for utilizado para ordenar o vetor.
+      for(int j = 0; j < v.length - 1 - i; j++) {
+        /* Se o valor da posição atual do vetor for maior que o proximo valor,
+          então troca os valores de lugar no vetor. */
+        if(v[j] > v[j + 1]) {
+          int aux = v[j];
+          v[j] = v[j + 1];
+          v[j + 1] = aux;
+        }
+      }
+    }
+  }
 }
